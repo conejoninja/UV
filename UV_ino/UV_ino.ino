@@ -1,3 +1,10 @@
+/*
+In my case, I'm a Skin Type II and always use SPF 50
+Take a look at SPF.md to know from where are those number
+
+
+*/
+
 int r = 4;
 int g = 3;
 int b = 2;
@@ -5,7 +12,8 @@ int b = 2;
 void setup() {                
   pinMode(r, OUTPUT);     
   pinMode(g, OUTPUT);     
-  pinMode(b, OUTPUT);     
+  pinMode(b, OUTPUT);
+  Serial.begin(9600);  
 }
 
 void ledOn(int led) {
@@ -60,7 +68,7 @@ void shortLed(int led) {
 }
 
 void loop() {
-  longLed(0);
+  /*longLed(0);
   shortLed(0);
   longLed(1);
   shortLed(1);
@@ -71,5 +79,34 @@ void loop() {
   longLed(4);
   shortLed(4);
   longLed(5);
-  shortLed(5);
+  shortLed(5);*/
+  int sv = analogRead(A1);
+  if(sv<10) {
+    sv = 0;
+  } else if(sv<46) {
+    sv = 1;
+  } else if(sv<65) {
+    sv = 2;
+  } else if(sv<83) {
+    sv = 3;
+  } else if(sv<103) {
+    sv = 4;
+  } else if(sv<124) {
+    sv = 5;
+  } else if(sv<142) {
+    sv = 6;
+  } else if(sv<162) {
+    sv = 7;
+  } else if(sv<180) {
+    sv = 8;
+  } else if(sv<200) {
+    sv = 9;
+  } else if(sv<221) {
+    sv = 10;
+  } else {
+    sv = 11;
+  }  
+  
+  Serial.println(sensorValue);
+  delay(1000);
 }

@@ -1,7 +1,7 @@
 UV
 ===
 
-Open soruce/hardware anti-UV bracelet. The bracelet has a UV sensor which will tell you which is the actual UV index (from 0 -no sun- to 11+ -dangerous sun-). It will log the UV index and remind you to re-apply sunscreen.
+Open source/hardware anti-UV bracelet. The bracelet has a UV sensor which will tell you which is the actual UV index (from 0 -no sun- to 11+ -dangerous sun-). It will log the UV index and remind you to re-apply sunscreen.
 
 
 About me and this project
@@ -25,6 +25,7 @@ UV index is a number from 0 to 11+.
 * [More info at Wikipedia](http://en.wikipedia.org/wiki/Ultraviolet_index)
 * [WHO GlobalUVI](http://www.who.int/uv/publications/en/GlobalUVI.pdf)
 * [WHO UVI Homepage](http://www.who.int/uv/en/)
+* [Himaya, Avoiding sunburn](http://www.himaya.com/solar/avoidsunburn.html)
 
 
 
@@ -36,7 +37,7 @@ Goals
 * The SMD leds I bought doesn't go well with PWN (very very small differentation among steps), so there're only 6 possible colors : red, green, blue, red+blue, green+blue, red+green+blue. red+green is very very similar to only green. Since the watch will be used in sunny days, colors have to be differentiable enough, also, there're only 12 indexes. Each color will be associated to 2 indexes, separated by long and short blinks. For example 900ms ON 100ms OFF for UVI 0 and 100ms ON 100ms OFF for UVI 1.
 * It will be powered by a CR2032(225mAh) or a CR2477(1000mAh) not sure, CR2477 has higher capacity, but it's quite bigger (7mm tall!)
 * It will have a button, when pressed the led will light on to tell you the current UVIndex
-* It will have a vibration motor, it will keep track of UVI and vibrate/remind you to re-apply sunscreen (higher UVI, shorter time to re-apply)
+* It will have a vibration motor, it will keep track of UVI and vibrate/remind you to re-apply sunscreen (higher UVI, shorter time). Note: Re-applying sunscreen has nothing to do with UVI, but usually at higher UVI the sunscreen is sweated away more easily
 * The brain will be an attiny85 (at first I thought about using a digispark, but it was too big)
 
 
